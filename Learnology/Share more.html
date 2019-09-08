@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Share more</title>
+</head>
+<body>
+  
+  <!--navbar-->
+<header>
+          
+    <div class="container">
+      <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />
+      <h3 class="logo">Learnology</h3>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="Know more.html">KNOW MORE</a></li>
+          <li><a href="Share more.html">SHARE MORE</a></li>
+          <li><a href="Sign up.html">SIGN UP</a></li>
+          <li><a href="Contact Us.html">CONTACT US</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <h1 id="title">Share <strong>More</strong></h1>
+
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+        
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+<div id="forum">       
+<br><br><br><br><br><br><br><br>
+<div class="card">
+    <div class="card-header">
+        <div class="profilePicture" id="mit">
+        </div>
+        <p>@MithunSrinavaratneraja</p>
+    </div>
+    <div class="card-body">
+        <p>Here is a link for anyone who wants to learn about recent Turkish politics;<br>
+        <a href="https://www.reuters.com/article/us-turkey-usa-erdogan-exclusive/exclusive-turkeys-erdogan-says-court-not-politicians-to-decide-pastors-fate-idUSKCN1M60EP">Turkish president lashes out on poiticians!</a></p>
+    </div>
+    
+</div>
+<br>
+<div class="card">
+    <div class="card-header">
+        <div class="profilePicture" id="girl">
+        </div>
+        <p>@hareshWedanayke</p>
+    </div>
+    <div class="card-body"> 
+        <p>thanks alot, This was very useful!</p>
+    </div>
+    
+</div>
+<br>
+<div class="card">
+    <div class="card-header">
+        <div class="profilePicture" id="boy">
+        </div>
+        <p>@nilabhagrwal</p>
+    </div>
+    <div class="card-body">
+        <p>anyone who wants to learn about motor cars in Sri lanka visit nethum's motor blogs.</p>
+    </div>
+    
+</div>
+</div>
+            <!--Slideshow-->
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img  id="slide" src="background_home.jpg">
+</div>
+
+<div class="mySlides fade">
+  <img  id="slide" src="slider-2.jpg">
+</div>
+
+<div class="mySlides fade">
+  <img id="slide" src="students_boys_girls_study_friends_80723_3480x2362.jpg">
+</div>
+
+<div class="mySlides fade">
+  <img  id="slide" src="img3.jpg">
+</div>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 5000); // Change image every 5 seconds
+}
+</script>
+
+ <footer>
+   <div class="footer">
+  <p>Copyright© 2018.   Learnology Inc.   All rights reserved. <a href=#>Terms of Use <br> </a>Nilabh Agrawal  . <a href="Contact Us.html">contact us</a></p>
+</div>
+
+ </footer> 
+  </body>
+  <style>
+
+.footer {
+   position: absolute;
+   width: 100%;
+   background-color:#837D7C;
+   color: white;
+   text-align:  center;
+   font-family: sans-serif;
+   text-decoration: none;
+   text-decoration-color: none;
+}
+
+.footer a{
+  text-decoration: none;
+  color: white;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+
+}
+
+#slide{
+    height: 100%; 
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: red;
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline;
+  transition: background-color 1.2s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 3s;
+  animation-name: fade;
+  animation-duration: 3s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+#forum{
+  position: absolute;
+  z-index: 3;
+  top: 40%;
+  left: 8%;
+  background-color: white;
+  font-family: sans-serif;
+  font-size: 20%;
+  -webkit-border-radius: 10px 10px 10px 10px;
+        border-radius: 10px 10px 10px 10px;
+        background: #fff;
+        -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+        box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    padding:1%;
+}
+
+#mit{
+    background-image: url(user@2x.png);
+    background-size:cover;
+}
+
+#girl{
+    background-image: url(user_account_profile_avatar_person_student_female-512.png);
+    background-size: cover;
+}
+
+#boy{
+    background-image: url(8-512.png);
+    background-size: cover;
+}
+
+.profilePicture{
+    width:40px;
+    height: 40px;
+    background-color:#03c9a9;
+    margin-top: 5px;
+    display: block;
+    float: left;
+    margin-left:5px;
+    border-radius: 50%;  
+
+}
+
+.card-header p {
+
+    float: left;
+    display: block;
+    color:black;
+    font-size: 18px;
+    text-indent: 10px;
+    height: 50px;
+    
+}
+
+.card-footer{
+    width: 100%;
+    height:50px;
+    float: left;
+}
+.button{
+    margin-right:20px;
+    width:100px;
+    margin-top: 5px;
+    height: 40px;
+    line-height: 40px;
+    background-color: red;
+    cursor: pointer;
+    color:white;
+    font-size: 16px;
+    float: left;
+    display: block;
+}
+       /*The navbar*/
+ #icon {
+float:left; 
+ width:6%;
+
+}
+
+.card-body p {
+    margin-left: 5%;
+    font-size: 16px;
+
+}
+.container {
+	width: 90%;
+	margin: 0 auto;
+	font-family:"Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+
+header {
+  background: red;
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.logo {
+  float: left;
+  color:white;
+  font-size:22px;
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 70px;
+  padding-top: 23px;
+
+  position: relative;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: white;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: white;
+
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+.card{
+	width:95%;
+	margin-left:2.5%;
+	min-height:100px;
+	background-color:white;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.card-header{
+	width:100%;
+	
+	border-bottom: 1px solid #e6e6e6;
+	height:50px;
+	float:left;
+}
+nav a:hover::before {
+  width: 100%;
+}
+ #title {
+		font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+        color: red; 
+        font-size: 50px;
+        z-index: 2;
+        position: absolute;
+        top: 14%;
+        right: 55%;
+        background: white;
+        font-weight: normal;
+        text-align: center;
+        opacity: 1;
+        left: 10%;
+        text-transform: uppercase;
+        -webkit-border-radius: 10px 10px 10px 10px;
+        border-radius: 10px 10px 10px 10px;
+        background: #fff;
+        -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+        box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+		padding:1%;
+        }
+
+body {
+            background-color: #eeeeee;
+        }
+	.input-group
+{
+	float:right;
+}
+	#button-addon2
+	{
+		color:white;
+		background-color:red;
+		height:3vh;
+		width:20%;
+	}
+        .h7 {
+            font-size: 0.8rem;
+        }
+
+        .gedf-wrapper {
+            margin-top: 0.97rem;
+        }
+
+        @media (min-width: 992px) {
+            .gedf-main {
+                padding-left: 4rem;
+                padding-right: 4rem;
+            }
+            .gedf-card {
+                margin-bottom: 2.77rem;
+            }
+        }
+	.dropdown-item
+	{
+		text-decoration:none;
+		background-color:red;
+		color:white;
+		padding:1%;
+	}
+	.card-link
+	{
+		text-decoration:none;
+		background-color:red;
+		color:white;
+		padding:1%;	
+		
+	}
+        /**Reset Bootstrap*/
+        .dropdown-toggle::after {
+            content: none;
+        }
+
+.card-body{
+    width:100%;
+    height: 80px;
+    
+    float :left;
+    display: block;
+}
+
+</style>

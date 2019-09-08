@@ -1,0 +1,452 @@
+<?php include('server.php') ?>
+
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+  /*The navbar*/
+ #icon {
+float:left; 
+ width:8%;
+
+}
+.container {
+	width: 80%;
+	margin: 0 auto;
+	font-family:"Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+
+header {
+  background: red;
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.logo {
+  float: left;
+  color:white;
+  font-size:22px;
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 70px;
+  padding-top: 23px;
+
+  position: relative;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: white;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: white;
+
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+	 body{
+            margin: 0;
+            padding: 0;
+			background-color:#52527a;
+        }    
+
+   /* BASIC */
+
+body{
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  height: 100vh;
+}
+
+a {
+  color: white;
+  display:inline-block;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+h2 {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  display:inline-block;
+  margin: 40px 8px 10px 8px; 
+  color: red;
+}
+
+
+
+/* STRUCTURE */
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column; 
+  justify-content: center;
+  width: 100%;
+}
+
+#formContent {
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 10px 10px;
+  background: #fff;
+  padding: 30px;
+  width: 90%;
+  max-width: 450px;
+  position: absolute;
+  padding: 0px;
+  -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+  box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+  text-align: center;
+  bottom: 1.75%;
+}
+
+#formFooter {
+  background-color: red;
+  border-top: 1px solid #dce8f1;
+  padding: 25px;
+  text-align: center;
+  -webkit-border-radius: 0 0 10px 10px;
+  border-radius: 0 0 10px 10px;
+}
+
+.footer {
+   position: absolute;
+   width: 100%;
+   background-color:#837D7C;
+   color: white;
+   text-align:  center;
+   font-family: sans-serif;
+   text-decoration: none;
+   text-decoration-color: none;
+}
+
+.footer a{
+  text-decoration: none;
+  color: white;
+}
+
+/* TABS */
+
+h2.inactive {
+  color: red;
+}
+
+h2.active {
+  color: red;
+  border-bottom: 2px solid red;
+}
+
+
+
+/* FORM TYPOGRAPHY*/
+
+input[type=button], input[type=submit], input[type=reset]  {
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 15px 80px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 13px;
+  -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+  box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+  margin: 5px 20px 40px 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
+  background-color: red;
+}
+
+input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {
+  -moz-transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+  -o-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95);
+}
+
+input[type=text] {
+  background-color: #f6f6f6;
+  border: none;
+  color: #0d0d0d;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px;
+  width: 85%;
+  border: 2px solid #f6f6f6;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+}
+
+input[type=text]:focus {
+  background-color: #fff;
+  border-bottom: 2px solid red;
+}
+
+input[type=text]:placeholder {
+  color: #cccccc;
+}
+
+
+
+/* Simple CSS3 Fade-in Animation */
+.underlineHover:after {
+  display: block;
+  left: 0;
+  bottom: -10px;
+  width: 0;
+  height: 2px;
+  background-color: red;
+  content: "";
+  transition: width 0.2s;
+}
+
+.underlineHover:hover {
+  color: #0d0d0d;
+}
+
+.underlineHover:hover:after{
+  width: 100%;
+}
+
+
+/* OTHERS */
+
+*:focus {
+    outline: none;
+} 
+
+#logo{
+	width: 50%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+
+}
+
+#slide{
+    height: 100%; 
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: red;
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline;
+  transition: background-color 1.2s ease;
+}
+
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 3s;
+  animation-name: fade;
+  animation-duration: 3s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+body{
+            margin: 0;
+            padding: 0;
+			background-color:white;
+        }    
+
+      /*The social footer*/
+
+
+
+</style>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Log in</title>
+	    	<header>
+	    		
+    <div class="container">
+   		<img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />
+    	<h3 class="logo">Learnology</h3>
+
+      <nav>
+        <ul>
+          
+          <li><a href="Learn more.html">Learn More</a></li>
+          <li><a href="Know more.html">Know More</a></li>
+          <li><a href="Share more.html">Share More</a></li>
+          <li><a href="Sign up.html">Sign Up</a></li>
+          <li><a href="Contact Us.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+</head>
+<body>
+
+	<!--Slideshow-->
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img  id="slide" src="background_home.jpg">
+</div>
+
+<div class="mySlides fade">
+  <img  id="slide" src="slider-2.jpg">
+</div>
+
+<div class="mySlides fade">
+  <img id="slide" src="students_boys_girls_study_friends_80723_3480x2362.jpg">
+</div>
+
+<div class="mySlides fade">
+  <img  id="slide" src="img3.jpg">
+</div>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 5000); // Change image every 5 seconds
+}
+</script>
+
+
+    <div class="wrapper fadeInDown" style="z-index: 3">
+   <div id="formContent" style="z-index: 4">
+    <!-- Tabs Titles -->
+    <h2 class="active"> Login </h2>
+    <a href="Sign up.html">
+    <h2 class="inactive underlineHover">Sign Up </h2>
+    </a>
+    <!-- Icon -->
+    <div>
+      <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="logo" alt="User Icon" />
+    </div>
+
+    <!-- Login Form -->
+    <form action="index.html" method="post">
+      <input type="text" id="login" name="email" placeholder="email ID">
+      <input type="text" style="-webkit-text-security: disc;"      id="password" name="password" placeholder="password">
+      <input type="submit" value="Log In" name="Log_in">
+    </form>
+
+    <!-- Remind Passowrd -->
+      <div id="formFooter">
+       <a id="other_underline" class="underlineHover" href="#">Forgot Password?</a>
+     </div>
+
+  </div>
+</div>
+
+ <footer>
+   <div class="footer">
+  <p>Copyright© 2018.   Learnology Inc.   All rights reserved. <a href=#>Terms of Use <br> </a>Nilabh Agrawal  . <a href="Contact Us.html">contact us</a></p>
+</div>
+
+ </footer> 
+ 
+</body>
+</html>

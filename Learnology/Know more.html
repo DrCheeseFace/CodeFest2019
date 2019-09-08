@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+
+ body{
+ 	margin: 0%;
+ 	
+ }
+
+.footer {
+   position: absolute;
+   width: 100%;
+   background-color:#837D7C;
+   color: white;
+   text-align:  center;
+   font-family: sans-serif;
+   text-decoration: none;
+   text-decoration-color: none;
+}
+
+.footer a{
+  text-decoration: none;
+  color: white;
+}
+
+ #title {font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+        color: red; 
+        font-size: 65px;
+        z-index: 2;
+        position: absolute;
+        bottom: 62%;
+        right: 55%;
+        background: white;
+        font-weight: normal;
+        text-align: center;
+        opacity: 1;
+        left: 10%;
+        text-transform: uppercase;
+        -webkit-border-radius: 10px 10px 10px 10px;
+        border-radius: 10px 10px 10px 10px;
+        background: #fff;
+        -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+        box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+        }
+
+ .upload {
+ 	    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+        color: red; 
+        font-size: 40px;
+        z-index: 2;
+        position: absolute;
+        top: 35%;
+        right: 40%;
+        left: 3%;
+        background: white;
+        font-weight: normal;
+        text-align: left;
+        opacity: 1;
+        -webkit-border-radius: 10px 10px 10px 10px;
+        border-radius: 10px 10px 10px 10px;
+        background: #fff;
+        -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+        box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+        padding:1%;
+ }
+
+#word{
+	   font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+        color: red; 
+        font-size: 20px;
+        z-index: 3;
+        position: absolute;
+        background-color: white;
+        text-align: left;
+        -webkit-border-radius: 10px 10px 10px 10px;
+        border-radius: 10px 10px 10px 10px;
+        background: #fff;
+        -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+        box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+        padding:1.5%;
+        left: 63%;
+        bottom: -12%;
+        max-width: 20%;
+        
+}
+
+a{
+    text-decoration: none;
+    color: red;
+}
+
+.social{
+          position: fixed;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+        z-index: 2;
+        top: 53%;
+        left: 90%;
+        padding: 1%;
+        opacity:1;
+        max-width: 3%;
+}
+
+/*The navbar*/
+ #icon {
+float:left; 
+ width:8%;
+
+}
+.container {
+	width: 80%;
+	margin: 0 auto;
+	font-family:"Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+
+header {
+  background: red;
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.logo {
+  float: left;
+  color:white;
+  font-size:22px;
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 70px;
+  padding-top: 23px;
+
+  position: relative;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: white;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: white;
+
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+}
+
+#slide{
+    height: 100%; 
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline;
+  transition: background-color 1.2s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 3s;
+  animation-name: fade;
+  animation-duration: 3s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+/* footer social icons */
+
+
+
+.social-circle li a:hover i, .triggeredHover {
+	-moz-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	-ms--transform: rotate(360deg);
+	transform: rotate(360deg);
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+	transition: all 0.2s;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 500px;
+  width: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 10px 5px;
+  color: white;
+  border-radius: 50%;
+  opacity:1.0;
+}
+ 
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+  opacity: 1.0;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+  opacity: 1.0;
+}
+
+.fa-google-plus {
+  background: #dd4b39;
+  color: white;
+  opacity: 1.0;
+}
+
+.fa-linkedin
+{
+	background-color: #008cc9;
+	opacity: 1.0;
+}
+
+.fa-rss
+{
+	background-color: #ee802f;	
+	opacity: 1.0;
+}
+
+.fa-pinterest
+{
+	background-color: red;
+	color: white;
+}
+
+.fa-instagram
+{
+	background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    color: white;
+}
+
+.fa-reddit
+{
+	background-color:#FF5700;
+	color: white;
+}
+
+
+</style>
+
+
+<head>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <header>
+    <div class="container">
+   		<img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />
+    	<h3 class="logo">Learnology</h3>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="Learn more.html">LEARN MORE</a></li>
+          <li><a href="Share more.html">SHARE MORE</a></li>
+          <li><a href="Sign up.html">SIGN UP</a></li>
+          <li><a href="Contact Us.html">CONTACT US</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  	<h1 id="title">Know <strong>More</strong></h1>
+	<title>Know More</title>
+
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
+
+<!--Slideshow HTML-->
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img  id="slide" src="background_home.jpg">
+</div>
+
+<div class="mySlides fade">
+  <img  id="slide" src="slider-2.jpg">
+</div>
+
+<div class="mySlides fade">
+  <img id="slide" src="students_boys_girls_study_friends_80723_3480x2362.jpg">
+</div>
+
+<div class="mySlides fade">
+  <img  id="slide" src="img3.jpg">
+</div>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 5000); // Change image every 5 seconds
+}
+</script>
+
+
+</head>
+
+<body>
+
+<!--Link News-->
+    <div id="word">
+    	<p><STRONG>WORD of the DAY!</STRONG><br><STRONG>Ingratiate</STRONG>
+    		<br>: to gain favor or favorable acceptance<br> for by deliberate effort — usually used with with<br>
+    		<STRONG>Example-</STRONG>Ford is also hoping to ingratiate<br> itself with investors as its stock prices lag<br><STRONG>Origin-</STRONG>17th-century English speakers combined the Latin noun gratia, meaning "grace" or "favor," with the English prefix in- to create the verb ingratiate.</p>
+    </div>
+
+   <div  class="upload">
+   	<p><strong>Here are our Links for this week!</strong></p>
+   	<ol style="list-style-type:square">
+   	    <li style="font-size: 20px;"><a href="http://www.bbc.com/news/world-europe-45622431" target="_blank">Learn about migration into Europe, as there is a large influx.</li>
+   	    <li style="font-size: 20px;"><a href="http://www.bbc.com/news/business-45622075" target="_blank">Learn about the US china trade war, and the rising tariffs between the two nations.</li>
+   	    <li style="font-size: 20px;"><a href="http://www.bbc.com/news/world-us-canada-45622562" target="_blank">Learn about Donald Trump and his scandalous campaign.</li>
+   	    <li style="font-size: 20px;"><a href="https://www.bbc.com/sport/golf/45622052" target="_blank">Learn about sport, as Tiger Woods brings home the win.</li>
+   	    <li style="font-size: 20px;"><a href="http://www.bbc.com/future/story/20180822-this-jordan-greenhouse-uses-solar-power-to-grow-crops" target="_blank">This is about the environment, as Jordan has found a new creative solution to deserts.</li>
+   	    <li style="font-size: 20px;"><a href="http://www.bbc.com/news/world-asia-45623126" target="_blank">Learn about Maldivian Politics, as there are more uprisings in maldives everyday.</li>
+   	    <li style="font-size: 20px;"><a href="http://www.bbc.com/culture/story/20180921-raza-the-strange-film-that-franco-left-behind" target="_blank">Learn about the History of Europe, people like Franco.</li>
+   	    <li style="font-size: 20px;"><a href="http://www.bbc.com/news/business-45615441" target="_blank">Learn about Economics, as the bidding for Comcast continues.</li>
+   	    <li style="font-size: 20px;"><a href="http://www.bbc.com/news/world-us-canada-45532679" target="_blank"<strong>Learn about hurricane Florence, as it's damge appales everyone.</li>
+   	    <li style="font-size: 20px;"><a href="http://www.bbc.com/travel/story/20180919-in-china-a-great-wall-no-one-knows" target="_blank">Learn about Travel in China, the undiscovered gret wall that is still not famous.</li>	
+   	 </a>
+   	</ol>
+
+   	<!--Pulling Awesome Font -->
+<link id="footer" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    		
+   </div>
+</body>
+	<div class="social" class="col-md-12">
+                    <ul style="list-style-type:none;" class="social-network social-circle">
+                        <li id="social_media"><a href="https://rss.com/" class="icoRss" title="Rss"><i class="fa fa-rss"></i></a></li>
+                        <li id="social_media"><a href="https://www.facebook.com/" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li id="social_media"><a href="https://twitter.com/?lang=en" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                        <li id="social_media"><a href="https://plus.google.com/u/0/?tab=wX" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+                        <li id="social_media"><a href="https://www.linkedin.com/uas/login?_l=en" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                        <li id="social_media"><a href="https://www.linkedin.com/uas/login?_l=en" class="icoPinterest" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>
+                        <li id="social_media"><a href="https://www.instagram.com/" class="icoInstagram" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+                        <li id="social_media"><a href="https://www.reddit.com/" class="icoReddit" title="Reddit"><i class="fa fa-reddit"></i></a></li>
+                    </ul>				
+	</div>
+ <footer>
+   <div class="footer">
+  <p>Copyright© 2018.   Learnology Inc.   All rights reserved. <a href=#>Terms of Use <br> </a>Nilabh Agrawal  . <a href="Contact Us.html">contact us</a></p>
+</div>
+
+ </footer> 
+
+</html>

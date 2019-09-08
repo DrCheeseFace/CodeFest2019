@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GK Quiz</title>
+
+	   <header>
+	    		
+    <div class="container">
+   		<img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />
+    	<h3 class="logo">Learnology</h3>
+
+      <nav>
+        <ul>
+          
+          <li><a href="Learn more.html">Learn More</a></li>
+          <li><a href="Know more.html">Know More</a></li>
+          <li><a href="Share more.html">Share More</a></li>
+          <li><a href="Sign up.html">Sign Up</a></li>
+          <li><a href="Contact Us.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+</head>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
+
+	<div class="background-wrap">
+            <video id="video-bg-elem" preload="auto" autoplay="true" loop="loop" muted="muted"> 
+                <source src="videoplayback.mp4" type="video/mp4">
+            </video>          
+        </div>
+   
+   <p id ="title">The GK Quiz</p>
+
+  <div class="icon-bar">
+  <a href="#" class="facebook"><i class="fa fa-facebook"></i></a> 
+  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a> 
+  <a href="#" class="google"><i class="fa fa-google"></i></a> 
+  <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+  <a href="#" class="youtube"><i class="fa fa-youtube"></i></a> 
+</div>
+
+	<table style="width:575px">
+	<tr>
+	  <td>
+	  	<div>
+	  		<p class="question">1. Why is there such an influx in Europe?</p>
+
+	    	<ul>
+	    	<input class="answer" type="radio" name="q1" value="1">
+	        <label id="correctString1">Northern Africa</label>
+	    	<br>
+	        <input class="answer" type="radio" name="q1" value="0">
+	        <label>Brexit</label>
+	        <br>
+	        <input class="answer" type="radio" name="q1" value="0">
+	        <label>Donald Trump</label>
+	        <br>
+	        <input class="answer" type="radio" name="q1" value="0">
+	        <label>The Asian Games</label>
+    		</ul>
+	  	</div>
+	  </td>
+	  <td>
+	  	<div>
+	  		<p class="question">2. Where is Tiger Woods from?</p>
+
+	    	<ul>
+	        <input class="answer" type="radio" name="q2" value="0">
+	        <label>Ethiopia</label>
+	        <br>
+	        <input class="answer" type="radio" name="q2" value="1">
+	        <label id="correctString2">Malaysia</label>
+	        <br>
+	        <input class="answer" type="radio" name="q2" value="0">
+	        <label>America</label>
+	        <br>
+	        <input class="answer" type="radio" name="q2" value="0">
+	        <label>Australia</label>
+	    	</ul>
+	  	</div>
+	  </td>
+	</tr>
+	<tr>
+	  <td>
+	  	<div>
+	  		<p class="question">3. Who is the current chinese head of state?</p>
+
+	    	<ul>
+	        <input class="answer" type="radio" name="q3" value="0">
+	        <label>Yen Mao</label>
+	        <br>
+	        <input class="answer" type="radio" name="q3" value="1">
+	        <label id="correctString3">Xi Jimping</label>
+	        <br>
+	        <input class="answer" type="radio" name="q3" value="0">
+	        <label>Peyong Chang</label>
+	        <br>
+	        <input class="answer" type="radio" name="q3" value="0">
+	        <label>Kim Jong Un</label>
+	    	</ul>
+		</div>
+	  </td>
+	  <td>
+	  	<div>
+	  		<p class="question">4. Where is Jordan located</p>
+
+	    	<ul>
+	        <input class="answer" type="radio" name="q4" value="0">
+	        <label>Asia</label>
+	        <br>
+	        <input class="answer" type="radio" name="q4" value="1">
+	        <label id="correctString4">Africa</label>
+	        <br>
+	        <input class="answer" type="radio" name="q4" value="0">
+	        <label>America</label>
+	        <br>
+	        <input class="answer" type="radio" name="q4" value="0">
+	        <label>Australia</label>
+    		</ul>
+	  	</div>
+	  </td>
+	</tr>
+	</table>
+<br/>
+  <div class="submitter">
+          <input class="quizSubmit" id="submitButton" onClick="submitQuiz()"
+          type="submit" value="Submit" />
+    </div>
+  
+
+    <div class="quizAnswers" id="correctAnswer1"></div>
+	    <div class="quizAnswers" id="correctAnswer2"></div>
+    <div class="quizAnswers" id="correctAnswer3"></div>
+    <div class="quizAnswers" id="correctAnswer4"></div>
+
+    <div>
+    	<h2 class="quizScore" id="userScore"></h2>
+    </div>
+	</div>
+
+	<style type="text/css">
+
+#title {font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+        color: red; 
+        font-size: 50px;
+        z-index: 10;
+        position: absolute;
+        bottom: 68%;
+        right: 30%;
+        background: white;
+        font-weight: normal;
+        text-align: center;
+        opacity: 1;
+        left: 30%;
+        text-transform: uppercase;
+        -webkit-border-radius: 10px 10px 10px 10px;
+        border-radius: 10px 10px 10px 10px;
+        background: #fff;
+        -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+        box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+        }
+
+{
+  border: 1px dotted black;
+}
+
+p.question {
+  font-family: Arial, sans-serif;
+	  font-size:15px;
+  color: #2E2E2E;
+  margin-bottom:0px;
+}
+
+h2.quizScore{
+  font-family: Arial, sans-serif;
+  font-size:25px;
+  color: white;
+}
+
+div.quizAnswers{
+  font-family: sans-serif;
+  font-size:16px;
+  color: white;
+  padding: 4px 0 4px 0;
+ font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+
+}
+
+#userscore{
+	 font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+        color: red; 
+        position: absolute;
+        background: white;
+        font-weight: normal;
+        text-align: center;
+        -webkit-border-radius: 10px 10px 10px 10px;
+        border-radius: 10px 10px 10px 10px;
+        background: #fff;
+        -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+        box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+        margin: 10%;
+}
+label {
+  font-family: Arial, sans-serif;
+  font-size:14px;
+  color: #424242;
+  vertical-align:top;
+}
+
+input.answer[type="radio"] {
+  margin-bottom: 10px;
+}
+
+input.quizSubmit[type="submit"] {
+  -webkit-background-clip: border-box;
+  -webkit-background-origin: padding-box;
+  -webkit-background-size: auto;
+  -webkit-transition-delay: 0s, 0s;
+  -webkit-transition-duration: 0.2s, 0.2s;
+  -webkit-transition-property: color, background-color;
+  -webkit-transition-timing-function: ease, ease;
+  box-shadow: rgba(0, 0, 0, 0.498039) 0px 0px 5px 0px;
+  color: white;
+  background-color: red;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  text-transform:uppercase;
+  height:230%;
+  width:220%;
+  border: 1px solid #5E5E5E;
+  border-radius:5px;
+  font-size: 20px;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+ }
+
+input.quizSubmit[type="submit"]:hover {
+  color: white;
+  background: grey;
+  text-decoration: none;
+}
+
+table {
+  background-color: #F2F2F2;
+	  border:1px solid #BDBDBD;
+  border-radius:5px;
+  padding:10px;
+  padding-left:25px;
+  box-shadow: rgba(0, 0, 0, 0.498039) 0px 0px 1px 0px;
+}
+
+th {
+  
+}
+
+tr {
+  
+}
+
+td {
+
+}
+
+.submitter {
+	  width:85px;
+	  left:44%;
+	  bottom:2%;
+	  position: absolute;
+
+	  color: red;
+}
+
+.hide {
+	  display:none;
+}
+
+table{
+	text-align: left;
+     position: absolute;
+     left: 29%;
+        color: red; 
+        z-index: 2;
+        position: absolute;
+        bottom: 8%;
+        right: 30%;
+        background: white;
+        font-weight: normal;
+        opacity: 1;
+        text-transform: uppercase;
+        -webkit-border-radius: 10px 10px 10px 10px;
+        border-radius: 10px 10px 10px 10px;
+        background: #fff;
+        -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+        box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+     }
+
+
+      .background-wrap {
+    position: fixed;
+    z-index: -1000;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+}
+            
+#video-bg-elem {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+ /*The navbar*/
+ #icon {
+float:left; 
+ width:8%;
+
+}
+.container {
+	width: 80%;
+	margin: 0 auto;
+	font-family:"Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+
+header {
+  background: red;
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.logo {
+  float: left;
+  color:white;
+  font-size:22px;
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 70px;
+  padding-top: 23px;
+
+  position: relative;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: white;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: white;
+
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+/*The social footer*/
+
+      body {margin:0;}
+
+.icon-bar {
+  position: fixed;
+  top: 70%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.google {
+  background: #dd4b39;
+  color: white;
+}
+
+.linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.content {
+  margin-left: 75px;
+  font-size: 30px;
+}
+
+.footer {
+   position: absolute;
+   width: 100%;
+   background-color:#837D7C;
+   color: white;
+   text-align:  center;
+   font-family: sans-serif;
+   text-decoration: none;
+   text-decoration-color: none;
+}
+
+.footer a{
+  text-decoration: none;
+  color: white;
+}
+
+	</style>
+
+<script type="text/javascript">
+
+
+	function submitQuiz() {
+		console.log('submitted');
+
+
+		function answerScore (qName) {
+			var radiosNo = document.getElementsByName(qName);
+
+			for (var i = 0, length = radiosNo.length; i < length; i++) {
+   				if (radiosNo[i].checked) {
+
+					var answerValue = Number(radiosNo[i].value);
+				}
+			}
+
+			if (isNaN(answerValue)) {
+				answerValue = 0;
+			}
+			return answerValue;
+		}
+
+
+		var calcScore = (answerScore('q1') + answerScore('q2') + answerScore('q3') + answerScore('q4'));
+		console.log("CalcScore: " + calcScore);
+
+
+		function correctAnswer (correctStringNo, qNumber) {
+			console.log("qNumber: " + qNumber); 
+			return ("The correct answer for question #" + qNumber + ": &nbsp;<strong>" +
+				(document.getElementById(correctStringNo).innerHTML) + "</strong>");
+			}
+
+
+		if (answerScore('q1') === 0) {
+			document.getElementById('correctAnswer1').innerHTML = correctAnswer('correctString1', 1);
+		}
+		if (answerScore('q2') === 0) {
+			document.getElementById('correctAnswer2').innerHTML = correctAnswer('correctString2', 2);
+		}
+		if (answerScore('q3') === 0) {
+			document.getElementById('correctAnswer3').innerHTML = correctAnswer('correctString3', 3);
+		}
+		if (answerScore('q4') === 0) {
+			document.getElementById('correctAnswer4').innerHTML = correctAnswer('correctString4', 4);
+		}
+
+
+		var questionCountArray = document.getElementsByClassName('question');
+
+		var questionCounter = 0;
+		for (var i = 0, length = questionCountArray.length; i < length; i++) {
+			questionCounter++;}
+
+
+		var showScore = "Your Score: " + calcScore +"/" + questionCounter;
+
+		if (calcScore === questionCounter) {
+			showScore = showScore + "&nbsp; <strong>Perfect Score!</strong>"
+		};
+		document.getElementById('userScore').innerHTML = showScore;
+	}
+
+$(document).ready(function() {
+
+	$('#submitButton').click(function() {
+		$(this).addClass('hide');
+	});
+
+});
+</script>
+
+</body>
+</html>
